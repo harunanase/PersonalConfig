@@ -19,6 +19,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'xuyuanp/nerdtree-git-plugin'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
