@@ -17,9 +17,10 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'hashivim/vim-terraform'
 Plugin 'preservim/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'xuyuanp/nerdtree-git-plugin'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -74,10 +75,17 @@ nnoremap <leader>w <C-w><C-w>
 " Check https://github.com/preservim/nerdtree/issues/1321
 let g:NERDTreeMinimalMenu=1
 
-"Command-T settings
-" Close NERDTree window
-let g:ctrlp_dont_split = 'NERD'
-nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>:CtrlPClearCache<cr>
+" FZF plugin settings
+let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -l -g ""'
+nmap <C-p> :Files<CR>
+nmap <C-e> :Buffers<CR>
+
+" This is the default extra key bindings of FZF
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
 
 " General settings
 set nu
