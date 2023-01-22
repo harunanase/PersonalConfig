@@ -53,14 +53,14 @@ filetype plugin indent on    " required
 
 " Nerdtree settings
 " Start NERDTree when Vim is started without file arguments.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
 
 " Close the tab if NERDTree is the only window remaining in it.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+"autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 " <shift>+i to Toogle this
 " let NERDTreeShowHidden=1
