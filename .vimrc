@@ -94,6 +94,7 @@ syntax on
 set cursorline
 set tabstop=4
 set shiftwidth=4
+set smartindent
 set expandtab
 set backspace=indent,eol,start
 set encoding=UTF-8
