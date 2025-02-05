@@ -108,4 +108,4 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 eval "$(gh copilot alias -- zsh)"
 
 # saml2aws alias
-alias s2a="eval $(saml2aws script)"
+alias s2a='eval "$(saml2aws script)"'
