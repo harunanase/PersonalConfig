@@ -104,8 +104,8 @@ autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
-# github copilot cli
-eval "$(gh copilot alias -- zsh)"
-
 # saml2aws alias
 alias s2a='eval "$(saml2aws login && saml2aws script)"'
+
+# gcloud sdk
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
